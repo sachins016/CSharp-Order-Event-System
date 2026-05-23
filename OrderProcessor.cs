@@ -11,8 +11,16 @@ namespace Real_Time_Order_Notification_System
 
         public void PlaceOrder(Order order)
         {
-            Console.WriteLine($"Order Placed: {order.OrderId}");
-            OnOrderPlaced?.Invoke(order);
+            try
+            {
+                Console.WriteLine($"Order Placed: {order.OrderId}");
+
+                OnOrderPlaced?.Invoke(order);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
     }
 }

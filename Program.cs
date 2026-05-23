@@ -25,7 +25,7 @@ namespace Real_Time_Order_Notification_System.Services
             Order order = new Order
             {
                 OrderId = 101,
-                CustomerName = "Soorya",
+                CustomerName = "Sachin S",
                 Amount = 2500
             };
 
